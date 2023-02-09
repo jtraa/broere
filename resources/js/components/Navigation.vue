@@ -79,7 +79,7 @@
                     <ul class="p-0 m-0 block xl:flex items-center justify-center font-bold uppercase font-poppins text-20pt inline-flex flex-nowrap whitespace-nowrap">
                         <li class="nav-item"><a class="nav-link text-darkblue" @click="$vuetify.goTo('#boeken', options)">Boeken</a></li>
                         <li class="nav-item"><a class="anchor nav-link text-darkblue" @click="$vuetify.goTo('#ontdek', options)">Ontdek</a></li>
-                        <li class="nav-item"><a class="anchor nav-link text-darkblue" @click="$vuetify.goTo('#pbtravel', options)">PB Travel</a></li>
+                        <li class="nav-item"><a class="anchor nav-link text-darkblue" @click="$vuetify.goTo('#pbtravel', options)">Broere VP</a></li>
                         <li class="nav-item"><a class="anchor nav-link text-darkblue" @click="$vuetify.goTo('#team', options)">Team</a></li>
 <!--                        <li class="nav-item"><a class="anchor nav-link text-darkblue" @click="$vuetify.goTo('#nieuwsbrief', options)">Nieuwsbrief</a></li>-->
                     </ul>
@@ -89,7 +89,7 @@
         <div class="w-full hidden flex-1 xl:flex items-center justify-end">
             <ul class="p-0 m-0 block xl:flex items-center justify-center nav nav-pills font-bold font-poppins text-20pt flex-nowrap">
                 <li class="nav-item"><a class="nav-link text-white inline-flex flex-nowrap items-center" target="_blank" :href="maps"><i class="fas fa-map-marker-alt mr-2 text-darkblue"></i>Locatie</a></li>
-                <li class="nav-item"><a class="nav-link text-white inline-flex flex-nowrap whitespace-nowrap items-center" :href="telephone"><i class="fas fa-phone-alt mr-2 text-darkblue"></i>0180 44 60 70</a></li>
+                <li class="nav-item"><a class="nav-link text-white inline-flex flex-nowrap whitespace-nowrap items-center" :href="telephone"><i class="fas fa-phone-alt mr-2 text-darkblue"></i>{{tel}}</a></li>
             </ul>
         </div>
     </div>
@@ -123,10 +123,13 @@ export default {
             type: Array,
         },
         maps: {
-            type: Array,
+            type: String,
         },
         telephone: {
-            type: Array,
+            type: String,
+        },
+        tel: {
+            type: String,
         },
     },
     methods: {

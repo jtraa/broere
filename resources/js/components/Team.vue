@@ -35,7 +35,7 @@
             <div class="flex justify-center">
                 <div class="lg:w-3/4 text-center mb-4 lg:mb-5">
                     <h2 class="mp-0 mb-3 text-darkblue text-17pt lg:text-24pt font-bold">
-                        Uit wie bestaat PB Travel?
+                        Uit wie bestaat Broere Vliegpassages?
                     </h2>
                     <p class="text-darkblue text-12pt lg:text-15pt">
                         Wij bestaan uit een ambitieus en samenhangend team. Uw wensen worden één op één besproken met iemand wiens dagelijke uitdaging, een oplossing vinden is. Die aan uw eisen voldoet, ongeacht de puzzel. De specialisten van PB Travel staan graag voor u klaar.

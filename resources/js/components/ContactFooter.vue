@@ -44,17 +44,17 @@
                 <h2 class="mp-0 mb-4 text-lightblue text-17pt lg:text-24pt font-extrabold uppercase">Contact</h2>
                 <div class="w-full">
                     <div class="md:flex justify-between items-center contact">
-                        <a class="text-powderblue text-decoration-none d-block md:d-flex" href="tel:0180446070" target="_blank">
+                        <a class="text-powderblue text-decoration-none d-block md:d-flex" :href="telephone" target="_blank">
                             <i class="fas fa-phone-alt text-yellow mr-2"></i>
-                            <span class="text-15pt lg:text-20pt font-bold">0180 44 60 70</span>
+                            <span class="text-15pt lg:text-17pt font-bold">{{tel}}</span>
                         </a>
-                        <a class="text-powderblue text-decoration-none d-block md:d-flex" href="mailto:info@pbtravel.nl">
+                        <a class="text-powderblue text-decoration-none d-block md:d-flex" href="mailto:business@broerevliegpassages.nl">
                             <i class="fas fa-envelope text-yellow mr-2"></i>
-                            <span class="text-15pt lg:text-20pt font-bold">info@pbtravel.nl</span>
+                            <span class="text-15pt lg:text-17pt font-bold">business@broerevliegpassages.nl</span>
                         </a>
-                        <a class="text-powderblue text-decoration-none d-block md:d-flex" target="_blank" href="https://www.pbtravel.nl">
+                        <a class="text-powderblue text-decoration-none d-block md:d-flex" target="_blank" href="https://www.broerevliegpassages.nl">
                             <i class="fas fa-globe text-yellow mr-2"></i>
-                            <span class="text-15pt lg:text-20pt font-bold">www.pbtravel.nl</span>
+                            <span class="text-15pt lg:text-17pt font-bold">www.broerevliegpassages.nl</span>
                         </a>
                     </div>
                 </div>
@@ -74,6 +74,9 @@ export default {
             type: Array,
         },
         telephone: {
+            type: Array,
+        },
+        tel: {
             type: Array,
         },
     },

@@ -4,7 +4,7 @@
             <div class="flex justify-center">
                 <div class="lg:w-5/6 text-center mb-4 lg:mb-5">
                     <h2 class="mp-0 mb-3 text-darkblue text-17pt lg:text-24pt font-bold">
-                        Waarom PB Travel?
+                        Waarom Broere Vliegpassages?
                     </h2>
                     <p class="text-darkblue text-12pt lg:text-15pt">
                         Er wordt u proactief de best beschikbare reis voor de beste prijs aangeboden.

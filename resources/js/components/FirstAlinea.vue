@@ -93,7 +93,7 @@
                                 ></i>
                                 <a :href="maps" target="_blank" class="text-decoration-none">
                                     <p class="font-bold text-white text-left text-15pt lg:text-17pt leading-8 ml-5 md:ml-0" id="form">
-                                        PB Travel<br />
+                                        Broere Vliegpassages<br />
                                         Kolenbranderstraat 20 E<br />
                                         2984 AT Ridderkerk
                                     </p>

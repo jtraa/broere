@@ -1,0 +1,38 @@
+/************
+	BODY
+************/
+
+body {
+
+}
+
+/************
+	COLORS
+************/
+
+.txt-grey {
+	color: #444;
+}
+.txt-blue {
+	color: #3c73ff;
+}
+
+/************
+	LINKS
+************/
+
+a {
+	text-decoration: none;
+	transition: .2s ease-in-out color, text-decoration;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1401px) {
+
+    .container {
+        max-width: 1350px !important;
+    }
+}

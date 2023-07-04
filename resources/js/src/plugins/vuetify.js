@@ -1,11 +1,10 @@
-import Vue from 'vue'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
-import colors from 'vuetify/lib/util/colors'
+import Vue from 'vue';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
+import colors from 'vuetify/lib/util/colors';
 
 Vue.use(Vuetify)
 
-const opts = {}
 
 export default new Vuetify({
     icons: {
@@ -14,8 +13,8 @@ export default new Vuetify({
     theme: {
         themes: {
             light: {
-                primary: '#14487a',
-                secondary: colors.red.lighten4, // #FFCDD2
+                primary: '#646fac',
+                secondary: '#646fac', // #FFCDD2
                 accent: colors.indigo.base, // #3F51B5
             },
         },

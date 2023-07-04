@@ -1,22 +1,27 @@
+<style>
+    .header-image {
+        mask-image: linear-gradient(to left, rgba(255,255,255, 1) 1%, rgba(0,212,255, 0.0) 99%);
+    }
+</style>
+
 <template>
     <div>
         <div class="md:relative">
-            <div class="z-50 overflow-hidden bg-white">
-                <img class="bg-bottom md:min-h-200px hidden md:block xl:w-screen" :src="headerImage" :alt="alt">
+            <div class="z-50 overflow-hidden bg-white max-h-screen">
+                <img class="bg-bottom hidden md:block header-image md:w-full" :src="headerImage" :alt="alt">
             </div>
             <div class="md:absolute z-30 top-0 bottom-0 right-0 left-0">
-                <div class="flex justify-start items-center h-100 container">
-                    <div class="md:w-5/12 w-full">
-<!--                        <img :src="logoImage" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000" class="w-1/2 hidden xl:flex overflow-hidden 2xl:mb-minus100 2xl:ml-minus100 select-none" :alt="alt" style="@media screen and (min-width: 992px) { margin-left:-100px; margin-bottom: -100px }">-->
-                        <div class="mt-20 xl:mt-0 xl:my-14 3xl:my-20 font-montserrat">
-                            <img :src="headerImage" class="2xl:w-full mb-4 md:hidden" :alt="alt">
-                            <h1 class="mb-4 text-17pt lg:text-24pt text-darkblue font-bold">Uw zakenreis is onze zorg</h1>
-                            <p class="mb-4 lg:mb-0 text-12pt lg:text-15pt text-darkblue font-semibold">
-                                Wij verzorgen reserveringen zoals vluchten, hotelkamers en autohuur. Ook regelen we transfers, visa, en vervoer per trein en boot. Op deze manier bespaart u tijd en kosten en kunt u
-                                zich volledig concentreren op uw bedrijfsactiviteiten.
+                <div class="flex justify-start items-center h-full xl:h-screen container">
+                    <div class="md:w-7/12 lg:5/12 w-full">
+                        <div class="mt-20 xl:mt-0 xl:mt-14 3xl:my-20 font-poppins md:font-montserrat">
+                            <img :src="headerImage" class=" md:hidden 2xl:w-full mb-4" :alt="alt">
+                            <h1 class="mb-4 text-17pt md:text-24pt"><span class="text-yellow font-bold">Uw zakenreis is onze zorg</span></h1>
+                            <p class="mb-4 md:mb-0 text-12pt md:text-16pt ">
+                                <span class="text-black font-bold md:font-bold">Wij verzorgen reserveringen zoals vluchten, hotelkamers en autohuur. Ook regelen we transfers, visa, en vervoer per trein en boot. Op deze manier bespaart u tijd en kosten en kunt u
+                                    zich volledig concentreren op uw bedrijfsactiviteiten.</span>
                             </p>
                         </div>
-                        <v-btn class="bg-yellow py-4 mb-4 lg:mb-0 text-white font-bold text-15pt lg:text-20pt no-underline font-poppins" :href="telephone">
+                        <v-btn class="v-btn bg-yellow py-4 mb-4 md:mb-0 text-white font-bold text-15pt md:text-20pt no-underline font-poppins" :href="telephone">
                             BEL NU : {{tel}}
                         </v-btn>
                     </div>
@@ -31,20 +36,20 @@
 export default {
     props: {
         alt: {
-            type: Array,
+            type: String,
         },
         tel: {
-            type: Array,
+            type: String,
         },
         telephone: {
-            type: Array,
+            type: String,
         },
     },
     data () {
         return {
-            headerImage: 'images/zakelijk-edit.webp',
+            headerImage: 'images/backgrounds/businessman.webp',
             lazyloadImage: 'images/header-dummy.webp',
-            logoImage: 'images/pb-travel-logo-transparant.webp',
+            logoImage: 'images/logo/broere-logo.png',
             bannerImage: 'images/banner/banner.gif',
         }
     },

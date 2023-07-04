@@ -16,12 +16,14 @@
 </style>
 
 <template>
-    <div class="bg-white container lg:py-16 flex justify-center" id="socials">
-        <div class="md:w-2/5 w-full pb-8 pt-4 lg:pt-0 lg:pb-0">
-            <div class="flex md:justify-between justify-around items-center socials">
-                <a class="text-darkblue" href="https://www.instagram.com/pbtravel_/?igshid=1qm6vznvgsh9k" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="text-darkblue" href="https://www.facebook.com/PB-Travel-138501419626647/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a class="text-darkblue" href="https://www.linkedin.com/company/pb-travel/about/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <div class="bg-yellow lg:py-16" id="socials">
+        <div class="container flex justify-center">
+            <div class="lg:w-2/5 md:w-1/2 w-full pb-8 pt-4 lg:pt-0 lg:pb-0">
+                <div class="flex md:justify-between justify-around items-center socials">
+                    <a class="text-white" href="https://www.instagram.com/broere.vliegpassages/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="text-white" href="https://www.facebook.com/Broerevliegpassage/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-white" href="https://www.linkedin.com/company/broere-vliegpassages-bv/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </div>
     </div>
@@ -32,13 +34,13 @@
 export default {
     props: {
         alt: {
-            type: Array,
+            type: String,
         },
         maps: {
-            type: Array,
+            type: String,
         },
         telephone: {
-            type: Array,
+            type: String,
         },
     },
     data () {

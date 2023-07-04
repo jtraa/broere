@@ -1,6 +1,6 @@
 <template>
     <v-card
-        class="overflow-hidden mx-auto w-full"
+        class="mx-auto w-full"
         height="50"
         max-width="500"
     >
@@ -48,13 +48,13 @@
     export default {
         props: {
             alt: {
-                type: Array,
+                type: String,
             },
             maps: {
-                type: Array,
+                type: String,
             },
             telephone: {
-                type: Array,
+                type: String,
             },
         },
         methods: {
@@ -65,9 +65,13 @@
                 $('.arrow').toggleClass('no-animation');
             }
         },
-        value: 1,
-        name: "BottomNavigation",
-        ex4: ['red', 'indigo', 'orange', 'primary', 'secondary', 'success', 'info', 'warning', 'error', 'red darken-3', 'indigo darken-3', 'orange darken-3'],
+        data() {
+            return {
+                value: 1,
+                name: "BottomNavigation",
+                ex4: ['red', 'indigo', 'orange', 'primary', 'secondary', 'success', 'info', 'warning', 'error', 'red darken-3', 'indigo darken-3', 'orange darken-3'],
+            }
+        },
     }
 </script>
 

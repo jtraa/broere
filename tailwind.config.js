@@ -1,26 +1,30 @@
 module.exports = {
-	important: true,
 	purge: [
 	 './resources/**/*.blade.php',
 	 './resources/**/*.js',
 	 './resources/**/*.vue',
 	],
-	darkMode: false, // or 'media' or 'class'
+    important: true,
+	darkMode: false,
 	theme: {
         extend: {
             backgroundColor: {
                 'lightblue-opacity': 'rgba(122,207,211,0.4)',
-                'lightblue': '#7acfd3',
-                'darkblue':'#13487a',
-                'yellow':'#ebb523',
-                'whitesmoke': '#F0F0F0',
+                'lightorange-opacity': 'rgba(227,124,0,1)',
+                'lightblue': 'F0F0F0',
+                'darkblue':'#963d00',
+                'yellow':'#e37c00',
+                'whitesmoke': '#f0f0f0',
+                'purpleblue': '#646fac',
 
             },
             borderColor: {
-                'lightblue':'#7acfd3',
-                'darkblue':'#13487a',
-                'yellow':'#ebb523',
-                'whitesmoke': '#F0F0F0',
+                'lightblue':'#F0F0F0',
+                'darkblue':'#e37c00',
+                'yellow':'#e37c00',
+                'whitesmoke': '#f0f0f0',
+                'black': '#020000',
+                'purpleblue': '#646fac',
             },
             fontSize: {
                 '10pt': '10pt',
@@ -73,6 +77,7 @@ module.exports = {
                 'minus100': '-100px',
             },
             maxHeight: {
+                '75px': '75px',
                 '100px': '100px',
                 '150px': '150px',
                 '200px': '200px',
@@ -89,10 +94,12 @@ module.exports = {
                 '750px': '750px',
             },
             textColor: {
-                'lightblue':'#7acfd3',
-                'darkblue':'#13487a',
+                'lightblue':'#F0F0F0',
+                'black': '#020000',
+                'darkblue':'#e37c00',
                 'powderblue':'#bee2e7',
-                'yellow':'#ebb523',
+                'yellow':'#e37c00',
+                'purpleblue': '#646fac',
             },
         }
 	},

@@ -1,96 +1,95 @@
 <style>
     #nav ul li a {
         cursor: pointer;
-        opacity: 0.75;
-        transition: .25s opacity;
+        opacity: 1;
+        color: rgb(2, 0, 0);
+        transition: .2s ease-in-out color;
+        position: relative;
+        z-index: 2;
     }
     #nav ul li a:hover{
-        opacity: 1;
+        color: #646fac;
     }
     .nav-pills li.nav-item a.nav-link {
-        opacity: 0.8;
-        transition: .25s opacity;
+        color: rgb(2, 0, 0);
+        transition: .2s ease-in-out color;
     }
-    .nav-pills li.nav-item a.nav-link:hover{
-        opacity: 1;
+    .nav-pills li.nav-item a.nav-link:hover {
+        color: #646fac;
+    }
+    .v-menu__content {
+        top: 64px !important;
     }
 </style>
 
 <template>
-<div class="navigation w-full fixed top-0 right-0 z-40 bg-lightblue-opacity" data-aos="fade-down" data-aos-duration="1000">
-    <div class="xl:text-center xl:hidden" data-app>
-        <v-toolbar>
-            <div class="h-full">
-                <a href="/"><img src="images/pb-travel-logo-klein.webp" class="h-full" :alt="alt"></a>
-            </div>
-            <v-spacer></v-spacer>
-            <v-toolbar-items class="hidden-sm-and-down">
-                <v-btn
-                    v-for="item in menu"
-                    :key="item.icon"
-                    :to="item.link"
-                    flat
-                >{{ item.title }}</v-btn>
-            </v-toolbar-items>
-            <v-menu class="flex justify-end" transition="scroll-y-transition">
-                <template class="flex justify-end" v-slot:activator="{ on, attrs }">
-                    <v-btn
-                        class="bg-darkblue md:w-auto py-4 text-white font-bold text-20pt no-underline font-poppins mb-0"
-                        dark
-                        v-bind="attrs"
-                        v-on="on"
-                    >
-                        <i class="fas fa-bars"></i>
-                    </v-btn>
-                </template>
-                <v-list>
-                    <v-list-item
-                        v-for="(item, index) in navItems"
-                        :key="index"
-                        v-on:click="$vuetify.goTo(item.link)"
-                    >
-                        <v-list-item-title>{{ item.title }}</v-list-item-title>
-                    </v-list-item>
-                </v-list>
-            </v-menu>
-        </v-toolbar>
-    </div>
-    <div class="xl:flex justify-center items-center container hidden xl:block transition-all navigation-desktop">
-        <div class="flex xl:contents justify-center items-center bg-lightblue">
-            <div class="flex-1 xl:hidden">
-                <a href="/" id="logo" class="text-darkblue flex">
-                    <img class="" src="images/pb-travel-logo-klein.webp" :alt="alt">
-                </a>
-            </div>
-            <div class="flex-1 w-full xl:hidden flex justify-end">
-                <div id="hamburger" role="menu" data-toggle="collapse" data-target="#navbarCollapse"
-                     aria-expanded="false" aria-label="Toggle navigation">
-                    <div id="nav-icon4" class="m-3">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+<div class="navigation w-full fixed top-0 bg-white right-0 z-40" data-aos="fade-down" data-aos-duration="1000">
+    <div class="content">
+        <div class="xl:text-center xl:hidden" data-app>
+            <v-toolbar>
+                <div class="h-full">
+                    <a href="/"><img src="images/logo/broere-logo-klein.png" class="h-full ml-0" :alt="alt"></a>
+                </div>
+                <v-spacer></v-spacer>
+
+                <v-menu :location="location" class="flex justify-end" transition="scroll-y-transition" left>
+                    <template class="flex justify-end" v-slot:activator="{ on, attrs }">
+                        <v-btn
+                            class="bg-yellow md:w-auto py-4 text-white font-bold text-20pt no-underline font-poppins mb-0"
+                            dark
+                            v-bind="attrs"
+                            v-on="on"
+                        >
+                            <i class="fas fa-bars"></i>
+                        </v-btn>
+                    </template>
+                    <v-list>
+                        <v-list-item
+                            v-for="(item, index) in navItems"
+                            :key="index"
+                            v-on:click="$vuetify.goTo(item.link)"
+                        >
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        </v-list-item>
+                    </v-list>
+                </v-menu>
+            </v-toolbar>
+        </div>
+        <div class="xl:flex justify-center items-center container hidden xl:block transition-all navigation-desktop">
+            <div class=" xl:contents justify-center items-center bg-lightblue">
+
+                <div class="xl:hidden">
+                    <a href="/" id="logo" class="text-darkblue flex">
+                        <img class="" src="images/logo/broere-logo.png" :alt="alt">
+                    </a>
+                </div>
+                <div class="w-full xl:hidden flex justify-end">
+                    <div id="hamburger" role="menu" data-toggle="collapse" data-target="#navbarCollapse"
+                         aria-expanded="false" aria-label="Toggle navigation">
+                        <div id="nav-icon4" class="text-yellow m-3">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="xl:flex-2 block xl:flex items-center justify-center">
-            <div class="navbar navbar-expand-xl p-0 m-0">
-                <nav id="nav">
-                    <ul class="p-0 m-0 block xl:flex items-center justify-center font-bold uppercase font-poppins text-20pt inline-flex flex-nowrap whitespace-nowrap">
-                        <li class="nav-item"><a class="nav-link text-darkblue" @click="$vuetify.goTo('#boeken', options)">Boeken</a></li>
-                        <li class="nav-item"><a class="anchor nav-link text-darkblue" @click="$vuetify.goTo('#ontdek', options)">Ontdek</a></li>
-                        <li class="nav-item"><a class="anchor nav-link text-darkblue" @click="$vuetify.goTo('#pbtravel', options)">Broere VP</a></li>
-                        <li class="nav-item"><a class="anchor nav-link text-darkblue" @click="$vuetify.goTo('#team', options)">Team</a></li>
-<!--                        <li class="nav-item"><a class="anchor nav-link text-darkblue" @click="$vuetify.goTo('#nieuwsbrief', options)">Nieuwsbrief</a></li>-->
-                    </ul>
-                </nav>
+            <div class="flex items-center justify-start">
+                 <a href="/"><img src="/images/logo/broere-logo.png" class="h-20 w-full" :alt="alt"></a>
             </div>
-        </div>
-        <div class="w-full hidden flex-1 xl:flex items-center justify-end">
-            <ul class="p-0 m-0 block xl:flex items-center justify-center nav nav-pills font-bold font-poppins text-20pt flex-nowrap">
-                <li class="nav-item"><a class="nav-link text-white inline-flex flex-nowrap items-center" target="_blank" :href="maps"><i class="fas fa-map-marker-alt mr-2 text-darkblue"></i>Locatie</a></li>
-                <li class="nav-item"><a class="nav-link text-white inline-flex flex-nowrap whitespace-nowrap items-center" :href="telephone"><i class="fas fa-phone-alt mr-2 text-darkblue"></i>{{tel}}</a></li>
-            </ul>
+            <div class="flex items-center justify-center">
+                <div class="navbar navbar-expand-xl p-0 m-0">
+                    <nav id="nav">
+                        <ul class="p-0 m-0 block xl:flex items-center justify-center font-bold font-poppins text-17pt inline-flex flex-nowrap whitespace-nowrap">
+                            <li class="nav-item"><a class="anchor nav-link" @click="$vuetify.goTo('#broere', options)">Over ons</a></li>
+                            <li class="nav-item"><a class="anchor nav-link" @click="$vuetify.goTo('#boeken', options)">(Online) Boeken</a></li>
+                            <li class="nav-item"><a class="anchor nav-link " @click="$vuetify.goTo('#ontdek', options)">Voordelen</a></li>
+                            <li class="nav-item"><a class="nav-link inline-flex flex-nowrap items-center capitalize" target="_blank" :href="maps"><i class="text-purpleblue fas fa-map-marker-alt mr-2"></i>Locatie</a></li>
+                            <li class="nav-item"><a class="nav-link inline-flex flex-nowrap whitespace-nowrap items-center" :href="telephone"><i class="text-purpleblue fas fa-phone-alt mr-2"></i>{{tel}}</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -103,15 +102,14 @@
         var scroll = $(window).scrollTop();
 
         if (scroll > 100) {
-            $(".navigation").addClass("bg-whitesmoke");
-            $(".nav-pills li.nav-item a.nav-link").removeClass("text-white");
             $(".navigation .container").addClass("py-0");
-            $(".navigation").removeClass("bg-lightblue-opacity");
+            $(".navigation").removeClass("bg-white");
+            $(".navigation").addClass("bg-whitesmoke");
         } else {
-            $(".nav-pills li.nav-item a.nav-link").addClass("text-white");
-            $(".navigation").addClass("bg-lightblue-opacity");
             $(".navigation .container").removeClass("py-0");
+            $(".navigation").addClass("bg-white");
             $(".navigation").removeClass("bg-whitesmoke");
+
         }
     });
 
@@ -120,7 +118,7 @@ import * as easings from 'vuetify/lib/services/goto/easing-patterns';
 export default {
     props: {
         alt: {
-            type: Array,
+            type: String,
         },
         maps: {
             type: String,
@@ -138,11 +136,10 @@ export default {
     data () {
         return {
             navItems: [
-                { title: 'Boeken', link: '#boeken, options'},
-                { title: 'Ontdekken', link: '#ontdek, options'},
-                { title: 'PB travel', link: '#pbtravel, options'},
-                { title: 'Team', link: '#team, options'},
-                // { title: 'Nieuwbrief', link: '#nieuwsbrief, options'},
+                { title: '(Online) Boeken', link: '#boeken, options'},
+                { title: 'Over ons', link: '#broere, options'},
+                { title: 'Voordelen', link: '#ontdek, options'},
+
             ],
             navImage: 'images/zakelijk-edit.webp',
             type: 'selector',
@@ -155,6 +152,14 @@ export default {
             offset: 50,
             easing: 'easeInOutCubic',
             easings: Object.keys(easings),
+            locations: [
+                'top',
+                'bottom',
+                'start',
+                'end',
+                'center',
+            ],
+            location: 'start',
         }
     },
     computed: {

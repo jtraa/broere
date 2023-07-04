@@ -37,12 +37,12 @@ a:hover {
     }
 }
 
-/************ 
-	FORMS  
+/************
+	FORMS
 ************/
 
 input.submit {
-	background-color: #3e75ff;
+	background-color: #e37c00;
 	border-radius: .25rem;
 	color: #fff;
 	padding: .375rem .75rem;
@@ -54,22 +54,23 @@ input.submit:hover {
 }
 
 input.form-control {
-  
+
 }
 
 input.form-control:focus {
-	border-color: #aaac84;
-	box-shadow: 0 0 0 0.1rem rgb(170 172 132 / 25%);	
+	border-color: #e37c00;
+	box-shadow: 0 0 0 0.1rem rgb(170 172 132 / 25%);
 }
 
 textarea.form-control {
-	
+
 }
 
 textarea.form-control:focus {
-	border-color: #aaac84;	
-	box-shadow: 0 0 0 0.1rem rgb(170 172 132 / 25%);	
+	border-color: #e37c00;
+	box-shadow: 0 0 0 0.1rem rgb(170 172 132 / 25%);
 }
+
 
 /***************************
 	

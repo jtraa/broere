@@ -63,12 +63,9 @@ class MailController extends Controller
 			'message' => $request->input('message'),
     	];
 
+	    \Mail::to('info@itraa.nl')->send(new \App\Mail\MyTestMail($mail, $company));
 
- 	   \Mail::to('info@pbtravel.nl')->send(new \App\Mail\MyTestMail($mail, $company));
-
-//	    \Mail::to('inbox@weleadtheway.nl')->send(new \App\Mail\MyTestMail($mail, $company));
-
-	    return back()->with('success', 'Bedankt voor je bericht, we proberen z.s.m. te antwoorden!');
+	    return back()->with('success', 'Bedankt, we proberen z.s.m. je bericht te beantwoorden!');
     }
 
     /**

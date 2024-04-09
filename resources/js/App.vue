@@ -58,6 +58,7 @@
             <AboutUs class="w-full order-2 md:order-1" id="broere" v-bind="websiteData" :isActive="true" />
         </div>
         <Speciality class="w-full" v-bind="websiteData" :isActive="true" />
+        <News  class="w-full" v-bind="websiteData" :isActive="true" />
         <TwelveReasons class="w-full" id="ontdek"  v-bind="websiteData" :isActive="true" />
         <ContactFooter class="" v-bind="websiteData" :isActive="true" />
         <SocialFooter  class="" />
@@ -80,6 +81,7 @@ import ContactFooter from './components/ContactFooter.vue';
 import BottomNavigation from './components/BottomNavigation.vue';
 import RocketLauncher from './components/RocketLauncher.vue';
 import Modal from './components/Modal.vue';
+import News from './components/News.vue';
 
 export default {
     components: {
@@ -93,6 +95,7 @@ export default {
         Modal,
         Header,
         Navigation,
+        News,
         RocketLauncher,
         SocialFooter,
     },

@@ -30,7 +30,8 @@
         <meta name="twitter:url" content="https://broerevliegpassages.nl">
         <meta name="twitter:site" content="https://broerevliegpassages.nl">
 
-		<link rel="icon" type="image/png" href="images/logo/broere-logo-klein.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/logo/broere-logo-klein.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/broere-logo-klein.png">
 
 		<title>Broere Vliegpassages - Vertrouwd en vakkundig</title>
 
